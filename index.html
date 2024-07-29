@@ -3,9 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Legal Match</title>
 </head>
 <body>
-    
+    <div id="container">
+        <nav>
+            <div id="slogan">
+                <a href="/"><img src="assets/logo.svg" id="logo" alt="logo"></a>
+                <span>FIND THE RIGHT LAWYER NOW</span>
+            </div>
+            <div id="services">
+                <span><img src="assets/check.png" alt="check icon"> No fee to present your case</span>
+                <span><img src="assets/check.png" alt="check icon">Choose from lawyers in your area</span>
+                <span><img src="assets/check.png" alt="check icon">A 100% confidential service</span>
+            </div>
+        </nav>
+        <section id="middle">
+            <div id="header">
+                <span class="header-one">Find a Lawyer for your Legal Issue</span>
+                <span class="header-two">Fast, Free and Confidential</span>
+            </div>
+            <div id="content">
+                <div id="form-container">
+                    <div class="input-container">
+                        <label for="zipcode">Enter Zip Code or City:</label>
+                        <input class="form-input" name="zipcode" type="text" placeholder="">
+                    </div>
+                    <div class="input-container">
+                        <label for="category">Choose a category:</label>
+                        <select class="form-input" name="category" id="category"></select>
+                    </div>
+                </div>
+                <div id="reviews-container">
+                    <span>reviews</span>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 </html>

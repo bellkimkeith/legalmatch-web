@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10em;
+}
+
+#logo {
+    height: 3em;
+    width: auto;
+    align-items: end;
+}
+
+#services {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+}
+
+#slogan {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: #222F64;
+}
+
+#slogan span {
+    min-width: fit-content;
+}
+
+#services span {
+    display: flex;
+    align-items: center;
+}
+
+#middle {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-image: linear-gradient(to bottom, #07224c, #072450, #082655, #082959, #092b5e, #092d63, #0a3069, #0a326e, #0a3575, #0b387c, #0b3c84, #0c3f8b);
+    height: 70vh;
+    padding: 2em 10em;
+    color: white;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-one {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.8em;
+}
+
+.header-two {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 1.8em;
+}
+
+#form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 0;
+    gap: 2em;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.input-container label {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
