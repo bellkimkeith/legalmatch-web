@@ -1,15 +1,16 @@
+import { zipCodeData } from "../data.js";
+
 export const createZipSuggestions = () => {
   const input = document.getElementById("zipcode-input");
   const suggestionsContainer = document.getElementById("suggestions-container");
 
-  const data = ["Nowheresville, XX 00000", "Cherry Hill, NJ 08002"];
-
   input.addEventListener("input", () => {
     const query = input.value.toLowerCase();
     suggestionsContainer.innerHTML = "";
+    suggestionsContainer.classList.add("hidden");
 
     if (query) {
-      const filteredData = data.filter((item) =>
+      const filteredData = zipCodeData.filter((item) =>
         item.toLowerCase().includes(query)
       );
       filteredData.forEach((item) => {
@@ -22,6 +23,11 @@ export const createZipSuggestions = () => {
         });
         suggestionsContainer.appendChild(div);
       });
+      if (suggestionsContainer.children.length > 0) {
+        suggestionsContainer.classList.remove("hidden");
+      } else {
+        suggestionsContainer.classList.add("hidden");
+      }
     }
   });
 
@@ -31,6 +37,7 @@ export const createZipSuggestions = () => {
       !e.target.closest("#suggestions-container")
     ) {
       suggestionsContainer.innerHTML = "";
+      suggestionsContainer.classList.add("hidden");
     }
   });
 };
