@@ -29,18 +29,20 @@
                     <div class="input-container">
                         <label for="zipcode">Enter Zip Code or City:</label>
                         <div class="form-input">
-                            <span>1</span>
-                            <input name="zipcode" type="text" placeholder="Does not have to be where you live">
+                            <span class="number">1</span>
+                            <input id="zipcode-input" name="zipcode" type="text" placeholder="Does not have to be where you live">
+                            <div id="suggestions-container"></div>
                         </div>
                     </div>
                     <div class="input-container">
-                        <label for="category">Choose a category:</label>
-                        <div class="form-input select-input">
-                            <span>2</span>
-                            <select name="category" id="category">
-                                <option id="select-placeholder" value="">Click to choose a legal category</option>
-                            </select>
+                        <label for="custom-select">Choose a category:</label>
+                        <div class="custom-select-container">
+                            <span class="number">2</span>
+                            <div id="custom-select">
+                                <span id="selected-option">Click to choose a legal category</span>
+                            </div>
                             <img src="/assets/arrow-down.png" alt="select caret">
+                            <div id="options-container" class="options-container hidden"></div>
                         </div>
                     </div>
                     <span id="more-categories">Can't find your category? <a href="#">Click here.</a></span>
@@ -142,5 +144,6 @@
             </div>
         </footer>
     </div>
+    <script type="module" src="/js/index.js"></script>
 </body>
 </html>

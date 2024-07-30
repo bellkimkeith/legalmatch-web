@@ -94,6 +94,7 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 0.5em;
+    position: relative;
 }
 
 .input-container label {
@@ -113,12 +114,12 @@ nav {
     align-items: center;
     gap: 2em;
     background-color: white;
-    padding: 1em 0.8em;
+    padding: 1em 0.5em;
     border-radius: 2em;
     border-width: 0;
 }
 
-.form-input span {    
+.number {    
     height: 1em;
     width: 1em;
     font-size: 1em;
@@ -129,16 +130,6 @@ nav {
     align-items: center;
     justify-content: center;
     background-color: #e0a72c;
-}
-
-select {
-    color: gray;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border: none;
-    font-size: 1em;
-    width: 100%;
 }
 
 option {
@@ -169,7 +160,7 @@ input {
     position: relative;
 }
 
-.form-input.select-input img {
+.custom-select-container img {
     position: absolute;
     right: 1.5em;
     pointer-events: none;
@@ -327,3 +318,84 @@ footer img {
     flex-direction: column;
     gap: 0.5em;
 }
+
+#suggestions-container {
+    max-height: 8em;
+    overflow-y: auto;
+    position: absolute;
+    top: 5.8em;
+    left: 1.5em;
+    background: #fff;
+    z-index: 10;
+    border: 1px solid lightgray;
+}
+
+.suggestion-item {
+    padding: 0.5em 1.5em;
+    cursor: pointer;
+    color: black;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+}
+
+.custom-select-container {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+    background-color: white;
+    padding: 0.2em 0.4em;
+    border-radius: 2em;
+    border-width: 0;
+}
+
+#custom-select {
+    display: flex;
+    padding: 1.2em 0;
+    cursor: pointer;
+    border-radius: 0.25em;
+    color: gray;
+    font-weight: 500;
+    width: 100%;
+}
+
+.options-container {
+    margin-top: 0.2em;
+    background: #fff;
+    max-height: 15em;
+    overflow-y: auto;
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.2);
+    border-radius: 1em;
+    padding: 0.5em;
+    -ms-overflow-style: none;
+    scrollbar-width: none;  
+}
+
+.option-item {
+    cursor: pointer;
+    margin: 0.5em;
+    padding: 0.2em 0 0.2em 3em;
+    color: black;
+}
+
+.option-item:hover {
+    background-color: rgb(202, 220, 233);
+}
+
+.hidden {
+    display: none;
+}
+
+.options-container::-webkit-scrollbar {
+    display: none;
+}
+
