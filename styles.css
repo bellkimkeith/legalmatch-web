@@ -68,10 +68,12 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 8em;
 }
 
 .header-one {
     font-family: "Montserrat", sans-serif;
+    font-weight: 300;
     font-size: 2.8em;
 }
 
@@ -83,9 +85,10 @@ nav {
 
 #form-container {
     display: flex;
+    flex: 1;
     flex-direction: column;
     padding: 2em 0;
-    gap: 2em;
+    gap: 1.5em;
 }
 
 .input-container {
@@ -98,3 +101,78 @@ nav {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
 }
+
+#reviews-container {
+    display: flex;
+    flex: 1;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+    background-color: white;
+    padding: 1em 0.8em;
+    border-radius: 2em;
+    border-width: 0;
+}
+
+.form-input span {    
+    height: 1em;
+    width: 1em;
+    font-size: 1em;
+    padding: 0.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0a72c;
+}
+
+select {
+    color: gray;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    font-size: 1em;
+    width: 100%;
+}
+
+option {
+    color: black;
+}
+
+input {
+    border: none;
+    font-size: 1em;
+    width: 100%;
+}
+
+*:focus {
+    outline: none;
+}
+
+#more-categories {
+    font-family: "Montserrat", sans-serif;
+    align-self: center;
+}
+
+#more-categories a {
+    color: white;
+    text-decoration: underline 1px;
+    text-decoration-color: rgba(255, 255, 255, 0.5);
+}
+
+.form-input.select-input {
+    position: relative;
+}
+
+.form-input.select-input img {
+    position: absolute;
+    right: 1.5em;
+    pointer-events: none;
+}
+
