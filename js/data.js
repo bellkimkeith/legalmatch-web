@@ -54,3 +54,24 @@ export const OTHERCATEGORIES = [
   "Categories Item Here",
   "Tempor Auctor (Estiarma, Toeruslei)",
 ];
+
+export const LAWYERS = [
+  {
+    image: "person-1.png",
+    name: "Mitchell M.",
+    location: "Cherry Hill, NJ",
+    practice: "Family Law",
+  },
+  {
+    image: "person-2.png",
+    name: "Joel C.",
+    location: "Little Rock, AK",
+    practice: "Job & Employment Law",
+  },
+  {
+    image: "person-3.png",
+    name: "Brigida R.",
+    location: "Dallas, TX",
+    practice: "Family Law",
+  },
+];
