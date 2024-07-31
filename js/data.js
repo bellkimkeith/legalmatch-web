@@ -1,5 +1,5 @@
-export const zipCodeData = ["Nowheresville, XX 00000", "Cherry Hill, NJ 08002"];
-export const categoryOptions = [
+export const ZIPCODES = ["Nowheresville, XX 00000", "Cherry Hill, NJ 08002"];
+export const CATEGORYOPTIONS = [
   { value: "Family", text: "Family" },
   { value: "Criminal Defense", text: "Criminal Defense" },
   { value: "Business", text: "Business" },
@@ -13,7 +13,7 @@ export const categoryOptions = [
   { value: "Government", text: "Government" },
   { value: "Intellectual Property", text: "Intellectual Property" },
 ];
-export const issues = [
+export const ISSUES = [
   "Adoptions",
   "Child Support",
   "Guardianship",
@@ -22,4 +22,35 @@ export const issues = [
   "Divorce",
   "Paternity",
   "Spousal Support or Alimony",
+];
+
+export const OTHERCATEGORIES = [
+  "Abuse (Child, Domestic, Sexual)",
+  "Loremipsum Dolorsitamet",
+  "Agencies & Administration",
+  "Lonsectetur Scingelit (Baseererkj, Mereit)",
+  "Automobile (DUl, Crimes, Speeding )",
+  "Miam Euvelit",
+  "Automobiles ( Accidents, Insurance )",
+  "Mempor Auctor (Estiarma, Toeruslej)",
+  "Banking ( Business, Consumer)",
+  "Nisultricies Dictumest",
+  "Bars & Restaurants",
+  "Nttring Sodalelit (Aeeticl Restoustoust)",
+  "Business Formation & Dissolution",
+  "Ntvarius Lectus & Congue",
+  "Children (Adoption, Custody, Support)",
+  "Pellentesque",
+  "Class Actions (Bad Drugs, Products)",
+  "Rigula Aliquamattis (Nestusotu, Wewreist)",
+  "Commercial Law and Contracts",
+  "Set Tigulempor",
+  "Commercial Real Estate",
+  "Sehicula Sedsitamet",
+  "Constitutional Law",
+  "Seque Nesturre",
+  "Construction (Disputes, Liens)",
+  "Tollis Gaurissed",
+  "Categories Item Here",
+  "Tempor Auctor (Estiarma, Toeruslei)",
 ];

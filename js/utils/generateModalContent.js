@@ -1,6 +1,6 @@
-import { issues } from "../data.js";
+import { ISSUES, OTHERCATEGORIES } from "../data.js";
 
-export const createModalTitle = (title) => {
+export const createMainCategoryModalTitle = (title) => {
   return `
     <p id="full-modal-title">Which <span id="custom-title">${title}</span> issue(s) apply to your case?</p>
     `;
@@ -8,7 +8,7 @@ export const createModalTitle = (title) => {
 
 export const createIssues = () => {
   const issuesContainer = document.getElementById("modal-issues");
-  issues.forEach((issue) => {
+  ISSUES.forEach((issue) => {
     const div = document.createElement("div");
     div.classList.add("checkbox-item");
 
@@ -24,5 +24,14 @@ export const createIssues = () => {
     div.appendChild(label);
 
     issuesContainer.appendChild(div);
+  });
+};
+
+export const createMoreCategoriesList = () => {
+  const content = document.getElementById("more-category-modal-body");
+  OTHERCATEGORIES.forEach((category) => {
+    const categoryItem = document.createElement("span");
+    categoryItem.textContent = category;
+    content.appendChild(categoryItem);
   });
 };

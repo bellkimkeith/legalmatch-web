@@ -1,5 +1,8 @@
-import { categoryOptions } from "../data.js";
-import { createIssues, createModalTitle } from "./generateModalContent.js";
+import { CATEGORYOPTIONS } from "../data.js";
+import {
+  createIssues,
+  createMainCategoryModalTitle,
+} from "./generateModalContent.js";
 
 export const customizeDropdownOptions = () => {
   const customSelect = document.getElementById("custom-select");
@@ -10,10 +13,8 @@ export const customizeDropdownOptions = () => {
   const modalTitle = document.getElementById("modal-title");
   const issuesContainer = document.getElementById("modal-issues");
 
-  // modalNumber.innerText = "3";
-
   const populateOptions = () => {
-    categoryOptions.forEach((option) => {
+    CATEGORYOPTIONS.forEach((option) => {
       const div = document.createElement("div");
       div.classList.add("option-item");
       div.dataset.value = option.value;
@@ -32,7 +33,10 @@ export const customizeDropdownOptions = () => {
       issuesContainer.innerHTML = "";
       selectedOption.textContent = option.textContent;
       optionsContainer.classList.add("hidden");
-      modalTitle.innerHTML += createModalTitle(option.dataset.value);
+
+      modalTitle.innerHTML += createMainCategoryModalTitle(
+        option.dataset.value
+      );
       createIssues();
       modal.classList.remove("hidden");
     }

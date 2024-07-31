@@ -150,10 +150,11 @@ option {
     align-self: center;
 }
 
-#more-categories a {
+#click-here  {
     color: white;
     text-decoration: underline 1px;
     text-decoration-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
 }
 
 .form-input.select-input {
@@ -405,7 +406,7 @@ footer img {
 }
 
 
-#modal {
+#modal, #more-category-modal {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -418,7 +419,7 @@ footer img {
     z-index: 1000;
 }
 
-#modal.hidden {
+#modal.hidden, #more-category-modal.hidden {
     display: none;
 }
 
@@ -427,11 +428,11 @@ footer img {
     border-radius: 0.5em;
     padding: 2.5em;
     width: 80%;
-    max-width: 500px;
+    max-width: 31.25em;
     position: relative;
 }
 
-#modal-close {
+#modal-close, #more-category-modal-close {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -460,6 +461,20 @@ footer img {
     padding: 1em 0;
 }
 
+#more-category-modal-body {
+    display: grid;
+    margin-top: 2em;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 0.8em;
+    gap: 0.8em;
+}
+
+#more-category-modal-body span {
+    text-wrap: nowrap;
+    color: rgb(57, 129, 180);
+    cursor: pointer;
+}
+
 .checkbox-item {
     display: flex;
     gap: 0.5em;
@@ -486,10 +501,20 @@ footer img {
     cursor: pointer;
 }
 
-#modal-body{
+#modal-body {
     display: flex;
     flex-direction: column;
     gap: 2em;
+}
+
+#more-category-modal-title {
+    font-weight: 500;
+    margin: 0;
+}
+
+#more-category-modal-subtitle {
+    font-weight: 400;
+    margin: 0.5em 0 0 0;
 }
 
 

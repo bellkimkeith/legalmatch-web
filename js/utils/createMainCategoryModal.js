@@ -1,4 +1,4 @@
-export const createModal = () => {
+export const createMainCategoryModal = () => {
   const mainContainer = document.getElementById("container");
   const modalContainer = document.createElement("div");
   const issuesContainer = document.createElement("div");

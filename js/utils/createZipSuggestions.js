@@ -1,4 +1,4 @@
-import { zipCodeData } from "../data.js";
+import { ZIPCODES } from "../data.js";
 
 export const createZipSuggestions = () => {
   const input = document.getElementById("zipcode-input");
@@ -10,7 +10,7 @@ export const createZipSuggestions = () => {
     suggestionsContainer.classList.add("hidden");
 
     if (query) {
-      const filteredData = zipCodeData.filter((item) =>
+      const filteredData = ZIPCODES.filter((item) =>
         item.toLowerCase().includes(query)
       );
       filteredData.forEach((item) => {

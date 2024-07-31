@@ -1,9 +1,11 @@
-import { createModal } from "./utils/createModal.js";
+import { createMainCategoryModal } from "./utils/createMainCategoryModal.js";
+import { createMoreCategoriesModal } from "./utils/createMoreCategoriesModal.js";
 import { createZipSuggestions } from "./utils/createZipSuggestions.js";
 import { customizeDropdownOptions } from "./utils/customizeDropdownOptions.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   createZipSuggestions();
-  createModal();
+  createMainCategoryModal();
+  createMoreCategoriesModal();
   customizeDropdownOptions();
 });
