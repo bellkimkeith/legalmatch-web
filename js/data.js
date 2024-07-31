@@ -75,3 +75,15 @@ export const LAWYERS = [
     practice: "Family Law",
   },
 ];
+
+export const REVIEWCATEGORIES = [
+  { name: "Overall", stars: 5 },
+  { name: "Responded in a timely ;manner", stars: 4 },
+  { name: "Answered questions clearly", stars: 5 },
+  { name: "Understood needs", stars: 4 },
+  { name: "Gave complete and clear information", stars: 5 },
+  { name: "Knowledgeable in legal area", stars: 4 },
+  { name: "Good value for money", stars: 5 },
+  { name: "Would hire again", stars: 4 },
+  { name: "Would recommend to friend", stars: 5 },
+];
