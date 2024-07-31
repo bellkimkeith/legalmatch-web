@@ -27,6 +27,24 @@ export const createReviewModal = () => {
 
   const readElements = document.getElementsByClassName("read");
 
+  const createStars = (num) => {
+    const starsContainer = document.createElement("div");
+    starsContainer.classList.add("stars");
+    for (let i = 1; i <= 5; i++) {
+      const starItem = document.createElement("span");
+      const starImage = document.createElement("img");
+      if (i > num) {
+        starImage.src = "/assets/grey-star.png";
+      } else {
+        starImage.src = "/assets/star.png";
+      }
+      starImage.alt = "star icon";
+      starItem.appendChild(starImage);
+      starsContainer.appendChild(starItem);
+    }
+    return starsContainer;
+  };
+
   const createTopContent = (
     image,
     name,
@@ -39,7 +57,6 @@ export const createReviewModal = () => {
     const reviewProfileContainer = document.createElement("div");
     const reviewProfileDetailsContainer = document.createElement("div");
     const totalRatingContainer = document.createElement("div");
-    const starsContainer = document.createElement("div");
 
     const profileImage = document.createElement("img");
     const profileName = document.createElement("span");
@@ -51,24 +68,12 @@ export const createReviewModal = () => {
     reviewProfileContainer.classList.add("review-profile");
     reviewProfileDetailsContainer.classList.add("review-profile-details");
     totalRatingContainer.classList.add("review-total-rating");
-    starsContainer.classList.add("stars");
     profileImage.classList.add("lawyer-image");
     profileName.classList.add("review-name");
     profileLocation.classList.add("review-location");
     profilePractice.classList.add("review-practice");
 
-    const createStars = (num) => {
-      for (let i = 0; i < num; i++) {
-        const starItem = document.createElement("span");
-        const starImage = document.createElement("img");
-        starImage.src = "/assets/star.png";
-        starImage.alt = "star icon";
-        starItem.appendChild(starImage);
-        starsContainer.appendChild(starItem);
-      }
-    };
-
-    createStars(stars);
+    const starsContainer = createStars(stars);
     profileRating.textContent = `Rating (${usersCount} users)`;
     profileImage.src = `/assets/${image}`;
     profileImage.alt = "lawyer image";
@@ -99,17 +104,7 @@ export const createReviewModal = () => {
         name.classList.add("first-review-category");
       }
       itemContainer.classList.add("review-category-item");
-      const starsContainer = document.createElement("div");
-      starsContainer.classList.add("stars");
-
-      for (let i = 0; i < 5; i++) {
-        const starItem = document.createElement("span");
-        const starImage = document.createElement("img");
-        starImage.src = "/assets/star.png";
-        starImage.alt = "star icon";
-        starItem.appendChild(starImage);
-        starsContainer.appendChild(starItem);
-      }
+      const starsContainer = createStars(element.stars);
 
       itemContainer.append(name, starsContainer);
       reviewMiddleContainer.appendChild(itemContainer);
@@ -125,10 +120,8 @@ export const createReviewModal = () => {
       const reviewItemContainer = document.createElement("div");
       const userInfoContainer = document.createElement("div");
       const comment = document.createElement("p");
-      const starsContainer = document.createElement("div");
       const userInfo = `<span class="review-data">by ${element.user}, ${element.createdAt}</span>`;
 
-      starsContainer.classList.add("stars");
       reviewBottomContainer.classList.add("review-bottom");
       reviewItemContainer.classList.add("review-item");
       userInfoContainer.classList.add("review-user-info");
@@ -136,14 +129,7 @@ export const createReviewModal = () => {
 
       comment.textContent = element.comment;
 
-      for (let i = 0; i < 5; i++) {
-        const starItem = document.createElement("span");
-        const starImage = document.createElement("img");
-        starImage.src = "/assets/star.png";
-        starImage.alt = "star icon";
-        starItem.appendChild(starImage);
-        starsContainer.appendChild(starItem);
-      }
+      const starsContainer = createStars(element.stars);
 
       userInfoContainer.appendChild(starsContainer);
       userInfoContainer.innerHTML += userInfo;
@@ -156,8 +142,7 @@ export const createReviewModal = () => {
 
   const openModal = (index) => {
     const usersCount = 29;
-    const stars = 5;
-    const { image, name, location, practice } = LAWYERS[index];
+    const { image, name, location, practice, stars } = LAWYERS[index];
     createTopContent(image, name, location, practice, usersCount, stars);
     createMiddleContent();
     createBottomContent(name);

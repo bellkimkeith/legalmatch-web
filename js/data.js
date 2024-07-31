@@ -61,18 +61,21 @@ export const LAWYERS = [
     name: "Mitchell M.",
     location: "Cherry Hill, NJ",
     practice: "Family Law",
+    stars: 5,
   },
   {
     image: "person-2.png",
     name: "Joel C.",
     location: "Little Rock, AK",
     practice: "Job & Employment Law",
+    stars: 3,
   },
   {
     image: "person-3.png",
     name: "Brigida R.",
     location: "Dallas, TX",
     practice: "Family Law",
+    stars: 4,
   },
 ];
 
@@ -99,7 +102,7 @@ export const USERREVIEWS = [
   },
   {
     lawyer: "Joel C.",
-    stars: 4,
+    stars: 5,
     createdAt: "07/10/2024",
     user: "Dexter Marchal",
     comment:
@@ -107,7 +110,7 @@ export const USERREVIEWS = [
   },
   {
     lawyer: "Brigida R.",
-    stars: 5,
+    stars: 3,
     createdAt: "05/10/2024",
     user: "Dexter Marchal",
     comment:
