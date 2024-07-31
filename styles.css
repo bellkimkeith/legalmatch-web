@@ -444,10 +444,10 @@ footer img {
 
 #modal-close, #more-category-modal-close, #review-modal-close {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0.625em;
+    right: 0.625em;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 2em;
 }
 
 #custom-title {
@@ -592,9 +592,30 @@ footer img {
     font-size: 0.8em;
 }
 
-.review-top, .review-middle {
-    padding: 0.8em 0;
+.review-top, .review-middle, .review-bottom {
+    padding: 0.5em 0;
+    border-top: 1px solid #000;
+    margin-top: 0.5em;
 }
 
+.review-user-info {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    margin-top: 1.25em;
+}
 
+.review-data {
+    font-size: 0.8em;
+    font-weight: 600;
+}
 
+.review-bottom {
+    margin-bottom: 1em;
+    max-height: 9em;
+    overflow: auto;
+}
+
+.review-comment {
+    margin: 0.2em 0 0 0;
+}

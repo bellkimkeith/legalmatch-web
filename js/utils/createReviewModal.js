@@ -1,4 +1,4 @@
-import { LAWYERS, REVIEWCATEGORIES } from "../data.js";
+import { LAWYERS, REVIEWCATEGORIES, USERREVIEWS } from "../data.js";
 
 export const createReviewModal = () => {
   const mainContainer = document.getElementById("container");
@@ -117,7 +117,42 @@ export const createReviewModal = () => {
     modalBody.appendChild(reviewMiddleContainer);
   };
 
-  const createBottomContent = () => {};
+  const createBottomContent = (name) => {
+    const userReviews = USERREVIEWS.filter((review) => review.lawyer === name);
+    const reviewBottomContainer = document.createElement("div");
+
+    userReviews.forEach((element) => {
+      const reviewItemContainer = document.createElement("div");
+      const userInfoContainer = document.createElement("div");
+      const comment = document.createElement("p");
+      const starsContainer = document.createElement("div");
+      const userInfo = `<span class="review-data">by ${element.user}, ${element.createdAt}</span>`;
+
+      starsContainer.classList.add("stars");
+      reviewBottomContainer.classList.add("review-bottom");
+      reviewItemContainer.classList.add("review-item");
+      userInfoContainer.classList.add("review-user-info");
+      comment.classList.add("review-comment");
+
+      comment.textContent = element.comment;
+
+      for (let i = 0; i < 5; i++) {
+        const starItem = document.createElement("span");
+        const starImage = document.createElement("img");
+        starImage.src = "/assets/star.png";
+        starImage.alt = "star icon";
+        starItem.appendChild(starImage);
+        starsContainer.appendChild(starItem);
+      }
+
+      userInfoContainer.appendChild(starsContainer);
+      userInfoContainer.innerHTML += userInfo;
+      reviewItemContainer.append(userInfoContainer, comment);
+      reviewBottomContainer.appendChild(reviewItemContainer);
+    });
+
+    modalBody.appendChild(reviewBottomContainer);
+  };
 
   const openModal = (index) => {
     const usersCount = 29;
@@ -125,7 +160,8 @@ export const createReviewModal = () => {
     const { image, name, location, practice } = LAWYERS[index];
     createTopContent(image, name, location, practice, usersCount, stars);
     createMiddleContent();
-    modalBody.appendChild(closeButton);
+    createBottomContent(name);
+    modalContent.appendChild(closeButton);
     modalContainer.classList.remove("hidden");
   };
 

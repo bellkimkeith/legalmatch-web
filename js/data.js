@@ -87,3 +87,30 @@ export const REVIEWCATEGORIES = [
   { name: "Would hire again", stars: 4 },
   { name: "Would recommend to friend", stars: 5 },
 ];
+
+export const USERREVIEWS = [
+  {
+    lawyer: "Mitchell M.",
+    stars: 5,
+    createdAt: "06/10/2024",
+    user: "Dexter Marchal",
+    comment:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, impedit voluptates! A non ratione ut culpa doloremque tempora natus omnis placeat animi. Perspiciatis dicta sequi sapiente molestias, dignissimos atque dolor.",
+  },
+  {
+    lawyer: "Joel C.",
+    stars: 4,
+    createdAt: "07/10/2024",
+    user: "Dexter Marchal",
+    comment:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, impedit voluptates! A non ratione ut culpa doloremque tempora natus omnis placeat animi. Perspiciatis dicta sequi sapiente molestias, dignissimos atque dolor.",
+  },
+  {
+    lawyer: "Brigida R.",
+    stars: 5,
+    createdAt: "05/10/2024",
+    user: "Dexter Marchal",
+    comment:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, impedit voluptates! A non ratione ut culpa doloremque tempora natus omnis placeat animi. Perspiciatis dicta sequi sapiente molestias, dignissimos atque dolor.",
+  },
+];
